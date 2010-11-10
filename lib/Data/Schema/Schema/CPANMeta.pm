@@ -50,7 +50,7 @@ You can use the schema to validate META.yml or META.json files.
 
 =cut
 
-use feature 'state';
+use 5.010;
 use Test::More;
 use Data::Schema;
 use File::Slurp;
