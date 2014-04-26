@@ -1,56 +1,6 @@
-package Data::Schema::Schema::CPANMeta;
-# ABSTRACT: Schema for CPAN Meta
+package Sah::Schema::CPANMeta;
 
-=head1 SYNOPSIS
-
- # you can use it in test script a la Test::CPAN::Meta
-
- use Test::More;
- use Data::Schema::Schema::CPANMeta qw(meta_yaml_ok);
- meta_yaml_ok();
-
- # test META.json instead of META.yml
-
- use Test::More;
- use Data::Schema::Schema::CPANMeta qw(meta_json_ok);
- meta_json_ok();
-
- # slightly longer example
-
- use Test::More tests => ...;
- use Data::Schema::Schema::CPANMeta qw(meta_spec_ok);
- meta_spec_ok("META.yml", 1.4, "Bad META.yml!");
-
- # JSON version
-
- use Test::More tests => ...;
- use Data::Schema::Schema::CPANMeta qw(meta_spec_ok);
- meta_spec_ok("META.json", 2, "Bad META.json!");
-
- # using outside test script
-
- use Data::Schema qw(Schema::CPANMeta);
- use YAML;
- use File::Slurp;
- my $meta = Load(scalar read_file "META.yml");
- my $res = ds_validate($meta, 'cpan_meta_2');
-
- # to get the schema as YAML string
-
- use Data::Schema::Schema::CPANMeta qw($yaml_schema_2 $yaml_schema_14);
-
-=head1 DESCRIPTION
-
-This module contains the schema for CPAN META.yml specification
-version 1.4 and 2, in L<Data::Schema> language. If you import
-C<$yaml_schema_14> and C<$yaml_schema_2> (or browse the source of this
-module), you can find the schema written as YAML.
-
-You can use the schema to validate META.yml or META.json files.
-
-=cut
-
-use 5.010;
+use 5.010001;
 use Test::More;
 use Data::Schema;
 use File::Slurp;
@@ -496,3 +446,53 @@ sub schemas {
 }
 
 1;
+# ABSTRACT: Sah Schema for CPAN Meta
+
+=head1 SYNOPSIS
+
+ # you can use it in test script a la Test::CPAN::Meta
+
+ use Test::More;
+ use Data::Schema::Schema::CPANMeta qw(meta_yaml_ok);
+ meta_yaml_ok();
+
+ # test META.json instead of META.yml
+
+ use Test::More;
+ use Data::Schema::Schema::CPANMeta qw(meta_json_ok);
+ meta_json_ok();
+
+ # slightly longer example
+
+ use Test::More tests => ...;
+ use Data::Schema::Schema::CPANMeta qw(meta_spec_ok);
+ meta_spec_ok("META.yml", 1.4, "Bad META.yml!");
+
+ # JSON version
+
+ use Test::More tests => ...;
+ use Data::Schema::Schema::CPANMeta qw(meta_spec_ok);
+ meta_spec_ok("META.json", 2, "Bad META.json!");
+
+ # using outside test script
+
+ use Data::Schema qw(Schema::CPANMeta);
+ use YAML;
+ use File::Slurp;
+ my $meta = Load(scalar read_file "META.yml");
+ my $res = ds_validate($meta, 'cpan_meta_2');
+
+ # to get the schema as YAML string
+
+ use Data::Schema::Schema::CPANMeta qw($yaml_schema_2 $yaml_schema_14);
+
+=head1 DESCRIPTION
+
+This module contains the schema for CPAN META.yml specification
+version 1.4 and 2, in L<Data::Schema> language. If you import
+C<$yaml_schema_14> and C<$yaml_schema_2> (or browse the source of this
+module), you can find the schema written as YAML.
+
+You can use the schema to validate META.yml or META.json files.
+
+=cut
