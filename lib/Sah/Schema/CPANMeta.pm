@@ -3,7 +3,7 @@ package Sah::Schema::CPANMeta;
 use 5.010001;
 use Test::More;
 use Data::Schema;
-use File::Slurp;
+use File::Slurp::Tiny qw(read_file);
 use JSON;
 use YAML::Syck; $YAML::Syck::ImplicitTyping = 1;
 require Exporter;
@@ -478,7 +478,7 @@ sub schemas {
 
  use Data::Schema qw(Schema::CPANMeta);
  use YAML;
- use File::Slurp;
+ use File::Slurp::Tiny qw(read_file);
  my $meta = Load(scalar read_file "META.yml");
  my $res = ds_validate($meta, 'cpan_meta_2');
 

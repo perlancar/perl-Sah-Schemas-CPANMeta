@@ -4,7 +4,7 @@ use lib './t'; require 'testlib.pm';
 use strict;
 use warnings;
 use Test::More tests => 51;
-use File::Slurp;
+use File::Slurp::Tiny qw(read_file);
 use FindBin '$Bin';
 use YAML::Syck; $YAML::Syck::ImplicitTyping = 1;
 
