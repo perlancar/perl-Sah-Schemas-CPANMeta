@@ -15,8 +15,7 @@ our $schema = ['hash', {
             req     => 1,
             min_len => 1,
             of      => ['str', {
-                # XXX BUG in dsah: won't pass if we uncomment
-                #req => 1,
+                req => 1,
 
                 match             => '^\S.* <.+@.+>$',
                 "match.err_level" => "warn",
