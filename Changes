@@ -1,5 +1,3 @@
-Revision history for Sah-Schemas-CPANMeta
-
 0.002   2016-07-22 (PERLANCAR)
 
         - [build] Rebuild to generate Sah::SchemaR::* modules.
