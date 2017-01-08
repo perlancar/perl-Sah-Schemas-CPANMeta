@@ -5,4 +5,9 @@ package Sah::Schemas::CPANMeta;
 
 =head1 SYNOPSIS
 
+
+=head1 prepend:SEE ALSO
+
+L<Sah::Schemas::CPAN>
+
 =cut
