@@ -10,4 +10,6 @@ package Sah::Schemas::CPANMeta;
 
 L<Sah::Schemas::CPAN>
 
+L<CPAN::Meta>, L<CPAN::Meta::Validator>
+
 =cut

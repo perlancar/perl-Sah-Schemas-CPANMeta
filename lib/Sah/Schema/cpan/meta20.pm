@@ -134,3 +134,9 @@ our $schema = ['hash', {
 
 1;
 # ABSTRACT:
+
+=head1 SEE ALSO
+
+L<CPAN::Meta>, L<CPAN::Meta::Validator>
+
+L<validate-cpan-meta-with-sah> from L<App::ValidateCPANMetaWithSah>
