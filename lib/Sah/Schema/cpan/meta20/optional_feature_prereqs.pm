@@ -10,7 +10,7 @@ our $schema = ['cpan::meta20::prereqs', {
 Just like a normal prereqs, except it must not include `configure` phase.
 
 _
-    'merge.subtract.allowed_keys' => [qw/configure/],
+    allowed_keys_re => '\A(develop|build|test|runtime|x_\w+)\z',
 }, {}];
 
 # ABSTRACT:
